@@ -125,6 +125,10 @@ vendor.qcom.bluetooth.soc=cherokee
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 
+# Chipset
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8150
+
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.dm_default_key.options_format.version=2
@@ -139,6 +143,7 @@ dalvik.vm.heapstartsize=8m
 dalvik.vm.heaptargetutilization=0.75
 
 # Display
+ro.surface_flinger.use_color_management=true
 ro.vendor.display.ad=1
 ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg
 ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
@@ -156,6 +161,8 @@ vendor.display.enable_default_color_mode=0
 vendor.display.enable_force_split=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
+vendor.display.qdcm.disable_factory_mode=1
+vendor.display.qdcm.mode_combine=1
 
 # DRM
 drm.service.enabled=true
@@ -186,7 +193,7 @@ debug.sf.latch_unsignaled=1
 persist.demo.hdmirotationlock=false
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
-persist.sys.sf.native_mode=0
+persist.sys.sf.native_mode=2
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
